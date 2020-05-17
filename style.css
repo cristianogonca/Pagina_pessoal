@@ -1,0 +1,231 @@
+/*  About me: Anderson Corrêa da Cunha*/
+
+/*soft reset do CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../Image/abstract-blue-geometric-shapes-background_1035-17545.jpg');
+    background-size: auto 100vh ;
+    font-family: 'Source Code Pro', monospace;
+    height: 100vh;
+    font-size: 18px;
+}
+
+/* Se a tela tiver pelo menos 400px, vai carregar estes estilos */
+@media (min-width: 400px){
+    body {
+        font-size: 12px;
+    }
+}
+/* Breackpoint */
+@media (min-width: 600px){
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px){
+    body {
+        font-size: 20px;
+    }
+}
+
+header{
+    height: 50vh; /*viewport height*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background-color: gray;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index:1;
+}
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+}
+.menu li {
+    list-style: none;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    transition: background-color s1, color 2s;
+}
+
+.menu a:active,
+.menu a:hover{
+    background-color: whitesmoke;
+    color: black;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+a {
+    color : black;
+    font-size: large;
+    font-style: normal;
+    text-decoration: none;  
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.site-subtitle,
+.site-title {
+    color: black;
+    text-align: center;
+}
+.site-title{
+    font-size: 4em;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.site-subtitle{
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8em;
+}
+
+.sobre,
+.contato,
+.portfolio {
+   padding: 2em;
+   min-height: 100vh;
+   
+}
+
+@media (min-width: 1200px){
+    .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+}
+
+
+.sobre h2,
+.contato h2,
+.portfolio h2 {
+    font-family: 'Balsamiq Sans', cursive;
+    color: black;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+.sobre p{
+    color: black;
+    margin-bottom: 1.4;
+    text-indent: 1em;
+    text-align: justify;
+}
+
+.sobre a{
+    color: black;
+    text-decoration: underline;
+}
+
+.sobre a:hover{
+    background-color: cyan;
+    text-decoration: none;
+}
+
+.sobre .profile {
+    float: right;
+    margin-left: 2em;
+}
+
+.sobre .profile img{
+    border-radius: 50%;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.portfolio .grid{
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width: 400px){
+    .portfolio .grid{
+        grid-template-columns: (2, 150px);
+    }
+}
+
+@media (min-width: 600px){
+    .portfolio .grid{
+        grid-template-columns: repeat(3, 150px);
+        align-content: center;
+        justify-content: center;
+        height: calc(100vh - 4em - 48px - 1.5em);
+    }
+}
+
+.portfolio figure{
+    text-align: center;
+}
+
+.img-portfolio {
+    height: 160px;
+    width: 150px;
+    object-fit: cover;
+    object-position: left bottom;
+    transition: transform 500ms;
+    border-radius: 10px;
+}
+
+.img-portfolio:hover {
+    transform: scale(1.2) rotate(15deg);
+}
+
+.flip-card{
+    perspective: 500px;
+
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.flip-card:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+    backface-visibility: hidden;
+    left:0;
+    position: absolute;
+    top:0;
+}
+
+.card-back{
+    height: 160px;
+    width: 150px;
+    transform: rotateY(180deg);
+}
+
+.contato .icons{
+    text-align: center;
+}
+
+.contato a {
+    color: black;
+    font-size: 1em;
+    transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover{
+    text-decoration: none;
+    text-shadow: 0px 0px 10px red;
+}
